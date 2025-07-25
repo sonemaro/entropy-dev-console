@@ -20,9 +20,6 @@ pub fn run() {
         .setup(|app| {
             if let Some(window) = app.get_webview_window("main") {
                 let _ = window.set_title("Entropy Developer Console | Network Health Monitor");
-                // Enable dev tools for debugging
-                #[cfg(debug_assertions)]
-                window.open_devtools();
             }
             Ok(())
         })

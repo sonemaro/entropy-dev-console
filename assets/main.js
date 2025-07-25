@@ -57,6 +57,12 @@ let networkMetrics = {
     peers: 0
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('contextmenu', (e) => {
+    e.preventDefault()
+  })
+})
+
 isTauri = typeof window.__TAURI__ !== 'undefined' && typeof window.__TAURI__.core !== 'undefined';
 
 async function saveReportToDesktop(data) {
